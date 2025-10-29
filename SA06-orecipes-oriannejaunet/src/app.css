@@ -1,0 +1,187 @@
+/* dans ce fichier on place le CSS global, par exemple pour la balise body, ou pour tous les h1 du site */
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+:root {
+  --primary-color: #c56e33;
+  --balance-color-light: #f4f4f4;
+  --balance-color-regular: #d0d1d0;
+  --balance-color-dark: #252525;
+  --border-radius: 8px;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  background-color: var(--balance-color-light);
+  color: #333;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+/* Définition d'un article */
+article {
+  position: relative;
+  padding: 1rem;
+  box-shadow: 2px 2px 5px grey;
+  border-radius: 0.5rem;
+}
+
+
+/* Bloc des boutons de commandes */
+.article-btns {
+  position: absolute;
+  top: -0.5rem;
+  right: -0.5rem;
+  display: flex;
+  gap: 0.5rem;
+}
+
+/* Bouton d'action sur un article */
+button {
+  border-radius: 1rem;
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--primary-color);
+  border: none;
+  color: var(--balance-color-light);
+}
+
+/* Règle un problème de centrage de l'icône */
+.btn-icon {
+  height: 20px;
+}
+
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 50;
+}
+
+.modal {
+  background: white;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.modal-actions {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.cancel-btn {
+  background: #e5e7eb;
+  color: #111;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+.confirm-btn {
+  background: #ef4444;
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+.cancel-btn:hover {
+  background: #d1d5db;
+}
+
+.confirm-btn:hover {
+  background: #dc2626;
+}
+
+
+/* Bloc comprenant l'image de la recette */
+.article-image {
+  width: 100%;
+  height: 30%;
+  overflow: hidden;
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+}
+
+/* Image de la recette */
+img {
+  width: 100%;
+}
+
+
+
+/* Conteneur */
+.container {
+  padding: 1rem;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Entête de page */
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+
+
+/* Formulaire d'ajout d'une recette */
+
+form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+
+}
+button {
+  background-color: var(--primary-color);
+  color: var(--balance-color-light);
+  width: fit-content;
+  margin-bottom: 1rem;
+  padding: 0.5rem 0.5rem;
+  border-radius: var(--border-radius);
+  border: none;
+
+}
+
+
+/* Liste des articles */
+.recipes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+/* Composants */
+input,
+textarea {
+  width: 100%;
+  border: solid 1px rgb(205, 203, 203);
+  padding: 0.5rem;
+  border-radius: var(--border-radius);
+}
