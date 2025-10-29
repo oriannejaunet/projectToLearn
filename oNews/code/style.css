@@ -1,0 +1,146 @@
+/* Mise en page globale */
+
+body {
+    display: flex;
+    flex-direction: row;
+    font-family: "sans serif";
+    height: 100vh;
+
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 50%;
+    background-image: url("../images/nicole.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+main {
+    background-color: #f9f9f9;
+    width: 50%;
+}
+
+/* Partie header à gauche */
+
+header h1 img {
+    width: 80px;
+    padding-right: 1rem;
+}
+
+
+h3 {
+    font-size: 27px;
+    padding: 0.8rem 0;
+}
+
+
+
+h1 {
+    color: white;
+    padding: 2rem;
+    text-transform: uppercase;
+    display: flex;
+    align-items: flex-start;
+}
+
+header p {
+    margin: 2rem;
+    padding: 1rem;
+    text-align: right;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+header p strong {
+    font-size: 2rem;
+}
+
+article p {
+    padding: 1rem 0;
+}
+
+.footer {
+    display: flex;
+    width: 100%;
+    padding: 1rem;
+    justify-content: flex-end;
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+
+
+nav a {
+    text-decoration: none;
+    padding: 0 1rem;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+
+/* Partie main à droite */
+
+h2 {
+    font-size: 2rem;
+    padding: 1rem;
+}
+
+main section {
+    width: 100%;
+    background-color: white;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    overflow-y: scroll;
+    height: 90%;
+}
+
+article {
+    border: 1px solid #f1f1f1;
+    padding: 2rem;
+}
+
+.tag {
+    border-radius: 0.3rem;
+    padding: 0.2rem;
+    font-weight: bold;
+    font-size: 0.8rem;
+    width: 80px;
+    text-align: center;
+    color: white;
+}
+
+.tag_news {
+    background-color: #aad872;
+}
+
+.tag_team {
+    background-color: #c56758;
+}
+
+.tag_work {
+    background-color: #416ae7;
+}
+
+.date {
+    color: grey;
+}
+
+.pseudonyme {
+    font-weight: bold;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.icone {
+    height: 10%;
+    flex-direction: row;
+    width: 8%;
+    margin-right: 10px;
+}
+
+.date {
+    margin-left: 10px;
+}
