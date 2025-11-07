@@ -1,0 +1,22 @@
+<!-- - interprete le html alors que = le montre comme chine de charactère -->
+<%- include('partials/header') %>
+
+    <header>
+        <h1>
+            <%= title %>
+        </h1>
+    </header>
+    <main>
+        <ul>
+            <!-- on parcours chaque ville du tableau cities -->
+                <% cities.forEach(city=> { %>
+<li>
+    <a href="/city/<%= city.name %>">
+        <%= city.name %>
+    </a>
+</li>
+                    <% }) %>
+        </ul>
+    </main>
+
+    <%- include('partials/footer') %>
