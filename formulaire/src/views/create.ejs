@@ -1,0 +1,11 @@
+<%- include('partials/header') %>
+
+<h1>Ajouter une nouvelle nourriture</h1>
+
+<form action="/create" method="POST">
+    <label for="name">Nom de la nourriture :</label>
+    <input type="text" id="name" name="name" placeholder="...." required>
+    <button type="submit">Ajouter</button>
+</form>
+
+<%- include('partials/footer') %>

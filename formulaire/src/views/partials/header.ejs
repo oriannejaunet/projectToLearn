@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="light">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Je teste ici l'existance de la variable -->
+  <title>
+    <% if(typeof pageTitle !== 'undefined') { %>
+      <%= pageTitle %>
+    <% } else { %>
+      Food App
+    <% } %>
+  </title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <header class="container">
+    <nav>
+      <ul>
+        <li>
+          <strong>
+            <a href="/" class="contrast">
+              Food App
+            </a>
+          </strong>
+        </li>
+      </ul>
+      <ul>
+        <li><a href="/">Home</a></li> 
+         <li><a href="/create">Créer un aliment</a></li> 
+      </ul>
+    </nav>
+  </header>

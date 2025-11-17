@@ -1,0 +1,24 @@
+
+
+<%- include('partials/header') %>
+
+<h1>Liste des nourritures</h1>
+
+<form method="GET" action="/">
+    <label for="search">Rechercher :</label>
+    <input 
+        type="text" 
+        name="search" 
+        id="search" 
+        placeholder="Tapez un nom..." 
+    />
+    <button type="submit">Rechercher</button>
+</form>
+
+<ul>
+  <% foods.forEach(function(food) { %>
+    <li><%= food.name %></li>
+  <% }); %>
+</ul>
+
+<%- include('partials/footer') %>
