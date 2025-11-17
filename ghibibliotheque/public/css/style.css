@@ -1,0 +1,77 @@
+/* Styles personnalisés pour la Ghibliothèque */
+
+/* Variables personnalisées */
+:root {
+  --primary: #4a7c59;
+  --primary-hover: #3a6349;
+  --primary-focus: rgba(74, 124, 89, 0.125);
+  --primary-inverse: #fff;
+}
+
+/* Styles pour la section héro */
+.hero {
+  padding: 3rem 0;
+  margin-bottom: 2rem;
+  background-color: rgba(74, 124, 89, 0.1);
+  border-radius: 8px;
+  padding: 2rem;
+}
+
+.hero h1 {
+  color: var(--primary);
+}
+
+/* Centrer le texte */
+.text-center {
+  text-align: center;
+}
+
+/* Styles pour les articles */
+article {
+  transition: transform 0.3s ease;
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  background: var(--card-background-color);
+}
+
+article > * {
+  padding: 1rem;
+  margin: 0;
+}
+
+article img {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 8px 8px 0 0;
+}
+
+article hgroup {
+  margin-top: 0.5rem;
+}
+
+article:hover {
+  transform: translateY(-5px);
+}
+
+/* Style pour le logo */
+.logo {
+  height: 40px;
+  width: auto;
+  vertical-align: middle;
+  margin-right: 0.5rem;
+}
+
+/* Styles pour le footer */
+footer {
+  margin-top: 3rem;
+  padding: 2rem 0;
+  text-align: center;
+  border-top: 1px solid var(--muted-border-color);
+}
+

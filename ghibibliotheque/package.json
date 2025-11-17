@@ -1,0 +1,30 @@
+{
+  "name": "e01-sb02e01_ghibliotheque-aspitrine",
+  "version": "1.0.0",
+  "description": "Le studio Ghibli a produit des films d'animation extraordinaires, mais nous n'avons pas encore de site pour les mettre en valeur !",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node --watch --env-file=.env index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/O-clock-Francfort/E01-SB02E01_Ghibliotheque-Aspitrine.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/O-clock-Francfort/E01-SB02E01_Ghibliotheque-Aspitrine/issues"
+  },
+  "homepage": "https://github.com/O-clock-Francfort/E01-SB02E01_Ghibliotheque-Aspitrine#readme",
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^5.1.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.39.1",
+    "eslint": "^9.39.1",
+    "globals": "^16.5.0"
+  }
+}

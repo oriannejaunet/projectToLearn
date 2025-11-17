@@ -1,0 +1,35 @@
+<%- include('partials/header', {
+  pageTitle: `Ghibliothèque | ${pageTitle}`
+}) %>
+
+  <main class="container">
+    <section>
+      <hgroup>
+        <h1><%= pageTitle %></h1>
+        <h2><%= description %></h2>
+      </hgroup>
+
+      <div>
+         <% movies.forEach(movie => { %>
+          <article>
+            <img src="<%= movie.banner_src %>" alt="<%= movie.title %>">
+            <hgroup>
+              <h3>
+                <%= movie.title %>
+              </h3>
+              <h4>
+                <%= movie.original_title %> (<%= movie.release_date %>)
+              </h4>
+            </hgroup>
+            <p>
+              <%= movie.description %>
+            </p>
+            <a href="/movies/<%= movie.id %>" role="button">Voir la suite</a>
+          </article>
+         <% }) %>
+      </div>
+    </section>
+
+  </main>
+
+<%- include('partials/footer') %>

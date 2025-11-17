@@ -1,0 +1,48 @@
+<%- include('partials/header') %>
+
+  <!-- Si on souhaite afficher en dur les données d'une variable -->
+  <!-- On peut le faire comme ci dessous -->
+  <!-- <%= JSON.stringify(movies, null, 2) %> -->
+
+  <main class="container">
+    <section class="hero">
+      <hgroup>
+        <h1>Bienvenue à la Ghibliothèque</h1>
+        <h2>Découvrez l'univers magique des films du Studio Ghibli</h2>
+      </hgroup>
+      <p>Le Studio Ghibli est un studio d'animation japonais fondé en 1985 par Hayao Miyazaki, Isao Takahata et Toshio
+        Suzuki. Connu pour ses films d'animation de haute qualité, ses histoires captivantes et ses personnages
+        mémorables, le Studio Ghibli a produit certains des films d'animation les plus acclamés au monde.</p>
+    </section>
+
+    <section>
+      <h2>Films à découvrir</h2>
+      <div class="grid">
+        <% movies.forEach(movie=> { %>
+          <article>
+            <img src="<%= movie.banner_src %>" alt="<%= movie.title %>">
+            <hgroup>
+              <h3>
+                <%= movie.title %>
+              </h3>
+              <h4>
+                <%= movie.original_title %> (<%= movie.release_date %>)
+              </h4>
+            </hgroup>
+            <p>
+              <%= movie.description %>
+            </p>
+            <a href="/movies/<%= movie.id %>" role="button">Voir la suite</a>
+          </article>
+          <% }) %>
+
+      </div>
+
+      <div class="text-center" style="margin-top: 2rem;">
+        <a href="/movies" role="button" class="secondary">Voir tous les films</a>
+      </div>
+    </section>
+
+  </main>
+
+  <%- include('partials/footer') %>

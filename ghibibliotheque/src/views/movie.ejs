@@ -1,0 +1,33 @@
+<%- include('partials/header', {
+  pageTitle: `Ghibliothèque | ${movie.title}`
+}) %>
+
+  <main class="container">
+    <article>
+      <div class="grid">
+        <div>
+          <hgroup>
+            <h1><%= movie.title %></h1>
+            <h2><%= movie.original_title %> (<%= movie.release_date %>)</h2>
+          </hgroup>
+          
+          <p><strong>Durée:</strong>
+            <%= movie.duration %> minutes
+          </p>
+          
+          <div>
+            <img src="<%= movie.image_src %>" alt="<%= movie.title %>"
+              style="width: 100%; height: auto; border-radius: 5px;">
+          </div>
+          
+          <h3>Synopsis</h3>
+          <p><%= movie.description %></p>
+
+          <a href="/movies" role="button" class="secondary">Retour à la liste des movies</a>
+        </div>
+      </div>
+    </article>
+
+  </main>
+
+<%- include('partials/footer') %>

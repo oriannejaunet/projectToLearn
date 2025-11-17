@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="light">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Je teste ici l'existance de la variable -->
+  <title>
+    <% if(typeof pageTitle !== 'undefined') { %>
+      <%= pageTitle %>
+    <% } else { %>
+      Ghibliothèque
+    <% } %>
+  </title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <header class="container">
+    <nav>
+      <ul>
+        <li>
+          <strong>
+            <a href="/" class="contrast">
+              <img src="/img/ponyo.png" alt="Logo Ghibliothèque" class="logo">
+              Ghibliothèque
+            </a>
+          </strong>
+        </li>
+      </ul>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/movies">Films</a></li>
+        <li><a href="/about">À propos</a></li>
+      </ul>
+    </nav>
+  </header>
