@@ -1,0 +1,24 @@
+<%- include ('partials/header') %>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script src="/js/contact.js"></script>
+
+    <body>
+        <form id="contact-form">
+            <legend>Contactez-nous</legend>
+            <!-- To simplify the tutorial, the value is static. -->
+            <input type="hidden" name="time" value="Mar 10 2025 08:46">
+            <label>Name</label>
+            <input type="text" name="name" required>
+            <label>Email</label>
+            <input type="email" name="email" required>
+            <label>Subject</label>
+            <input type="text" name="title" required>
+            <label>Message</label>
+            <textarea name="message" required></textarea>
+            <input type="submit" value="Send">
+        </form>
+        <p id="form-success" class="form-msg">Votre message a bien été envoyé !</p>
+        <p id="form-error" class="form-msg">Une erreur est survenue. Veuillez réessayer.</p>
+
+
+        <%- include ('partials/footer') %>

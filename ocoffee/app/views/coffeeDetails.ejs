@@ -1,0 +1,23 @@
+<%- include ('partials/header') %>
+ <section id="latest-products">
+<div class="articles only-display-3-articles" id="articles-list">
+                <article>
+                <img src="/images/coffees/<%= coffee.reference %>.png" alt="<%= coffee.name %>" />
+                <div>
+                    <h2>
+                        <%= coffee.name %>
+                    </h2>
+                    <p>
+                        <%= coffee.country_name %>
+                    </p>
+                    <p>
+                        <%= coffee.price %> €
+                    </p>
+                    <p>
+                        <%= coffee.description %>
+                    </p>
+                </div>
+            </article>
+    </div>
+</section>
+    <%- include ('partials/footer') %>

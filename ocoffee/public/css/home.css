@@ -1,0 +1,104 @@
+/* ======== About Section ======== */
+#articles-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+}
+
+
+#about {
+    display: flex;
+    justify-content: space-between;
+    gap: 5rem;
+}
+
+#about .home_items {
+   display: grid;
+    grid-template-columns: repeat(2, 1fr); /
+    width: fit-content;
+    padding: 20px 0;
+    place-items: center;
+}
+
+#about img {
+    border-radius: 0.7rem;
+    object-fit: cover;
+    width: 50%;
+    max-width: 650px;
+}
+
+@media screen and (max-width: 1280px) {
+    #about img {
+        display: none;
+    }
+}
+
+#about h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+#about p {
+    line-height: 1.5rem;
+    margin: 3rem 0;
+    font-size: 1.3rem;
+    line-height: 2rem;
+    text-align: justify;
+}
+
+#about a {
+    width: fit-content;
+}
+
+
+#latest-products h1 {
+  padding: 4.5rem;
+  background-image: url(../images/coffees/256505890.png);
+  border-radius: 0.5rem;
+
+  text-align: center;
+  font-size: 2rem;
+}
+
+#latest-products .articles {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr)); /* https://css-tricks.com/a-responsive-grid-layout-with-no-media-queries/ */
+  gap: 2rem;
+
+  margin-top: 5rem;
+}
+
+/* Bonus : hide all articles after the 3rd one until the user clicks the button to display more */
+#latest-products .only-display-3-articles article:nth-child(n+4) {
+  display: none;
+}
+
+#latest-products article {
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  border-radius: 0.5rem;
+}
+
+#latest-products article img {
+  height: 12rem;
+  width: 100%;
+  object-fit: cover;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+}
+
+#latest-products article div {
+  padding: 2rem;
+  text-align: end;
+}
+
+#latest-products article h2 {
+  margin-bottom: 1rem;
+}
+
+#latest-products article a {
+  margin-top: 1rem;
+}
+
+#latest-products button {
+  margin: 2rem auto 0 auto;
+}

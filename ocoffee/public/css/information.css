@@ -1,0 +1,131 @@
+#information h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    text-align: center;
+    color: black;
+    padding-bottom: 10px;
+}
+
+#information h2 {
+    font-size: 2.5rem;
+    margin-top: 40px;
+    margin-bottom: 15px;
+    text-align: center;
+    color: black;
+}
+
+#information p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+
+
+#information_access {
+display: grid;
+grid-template-columns: 1fr 1fr;
+}
+
+#information_access h2 {
+    font-size: 2.2rem;
+    margin-top: 40px;
+    margin-bottom: 15px;
+    text-align: center;
+    color:black;
+}
+
+#map { height: 500px; }
+
+
+#information_access ul {
+    margin-top: 1.5rem;
+    list-style: none;
+    text-align: center;
+}
+
+#information_access li {
+    padding: 1.3rem;
+    font-weight: 600;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+
+@media (max-width: 768px) {
+ #information   main {
+        margin: 20px;
+        padding: 25px;
+    }
+
+  #information  h1 {
+        font-size: 2rem;
+    }
+
+#information    h2 {
+        font-size: 1.5rem;
+    }
+
+ #information   p {
+        font-size: 1rem;
+    }
+
+
+    #information ul {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+#contact-form {
+    margin: 40px auto;
+    padding: 25px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+#contact-form legend {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    font-weight: 600;
+    color: black;
+}
+
+#contact-form label {
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+#contact-form input,
+#contact-form textarea {
+    width: 80%;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+#contact-form input[type="submit"] {
+    background: #4A8EF8;
+    color: white;
+    border: none;
+    margin: 1rem;
+}
+
+.form-msg {
+    display: none;
+    padding: 15px;
+    margin-top: 15px;
+    font-size: 1rem;
+    background: #d4edda;
+    color: black;
+}
+
+
+@media (max-width: 480px) {
+    #contact-form {
+        padding: 20px;
+        margin: 20px;
+    }
+}

@@ -1,0 +1,52 @@
+<%- include ('partials/header') %>
+<script src="/js/home.js"></script>
+
+    <main>
+        <section id="about">
+            <div>
+                <h1>Votre spécialiste Haucloquois du café</h1>
+                <p>oCoffee est un détaillant de café et de produits associés à la consommation du café basé dans la
+                    ville de Hauts-de-Cloques. Nous importons nos produits directement des producteurs, et nous les
+                    sélectionnons selon des critères exigeants de qualité. oCoffee est reconnu à l’échelle
+                    départementale.</p>
+                    <div class="home_items">
+                <a class="button" href="/product/list">Notre catalogue</a>
+                <a class="button" href="/information/about">En savoir plus</a>
+                <a class="button" href="/information/access">Plan et horaires</a>
+                <a class="button" href="/information/contact">Contactez-nous</a>
+            </div>
+            </div>
+            <img src="/images/about.jpg" alt="Selection de nos meilleurs cafés oCoffee">
+        </section>
+
+        <section id="latest-products">
+            <h1>Nouveautés</h1>
+
+            <div class="articles only-display-3-articles" id="articles-list">
+                <% for (const c of coffees){ %>
+                    <article>
+                        <img src="/images/coffees/<%= c.reference %>.png" alt="<%= c.name %>" />
+                        <div>
+                            <h2>
+                                <%= c.name %>
+                            </h2>
+                            <p>
+                                <%= c.country_name %>
+                            </p>
+                            <p>
+                                <%= c.price %> €
+                            </p>
+                            <a class="button-outline" href="/product/<%= c.reference %>">Voir le détail</a>
+                        </div>
+                    </article>
+                    <% } %>
+            </div>
+
+            <button class="button" id="see-all-products-button">
+                Voir tous les produits
+            </button>
+        </section>
+
+    </main>
+
+    <%- include ('partials/footer') %>

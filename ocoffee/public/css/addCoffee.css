@@ -1,0 +1,62 @@
+#addCoffee {
+    width: 100%;
+    padding: 40px ;
+}
+
+#addCoffee h1 {
+    text-align: center;
+    font-size: 2rem;
+    color: black;
+    margin-bottom: 40px;
+}
+
+#addCoffee form {
+    max-width: 900px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+#addCoffee label {
+    display: block;
+    font-size: 1.2rem;
+    color: white;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+#addCoffee input,
+#addCoffee textarea,
+#addCoffee select {
+    width: 100%;
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+#addCoffee button {
+    width: 100%;
+    padding: 15px;
+    border-radius: 8px;
+    background: #4a90ff;
+    color: white;
+    font-size: 1.2rem;
+}
+
+#characteristics-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.checkbox-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.checkbox-item label {
+    text-align: left;
+    margin: 0;
+}

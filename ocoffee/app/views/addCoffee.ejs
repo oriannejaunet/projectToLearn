@@ -1,0 +1,62 @@
+<%- include ('partials/header') %>
+
+<section id="addCoffee">
+    <h1>Ajouter un café</h1>
+
+<form method="POST" action="/admin/addCoffee"> 
+
+    <p>
+        <label for="reference">Référence du café</label>
+        <input type="number" min="1" max="9999" name="reference" id="reference" placeholder="Café" required>
+    </p>
+
+    <p>
+        <label for="name">Nom du café</label>
+        <input type="text" name="name" id="name" placeholder="Nom" required>
+    </p>
+
+    <p>
+        <label for="description">Description du café</label>
+        <textarea name="description" id="description" rows="5" cols="30" placeholder="Décrivez le café..."></textarea>
+    </p>
+
+
+ <p>
+    <label for="name">Caractéristiques</label>
+    <select name="characteristics[]" id="characteristic_id"  multiple size="5" required>
+        <% characteristics.forEach(c => { %>
+            <option value="<%= c.characteristic_id %>"><%= c.name %></option>
+        <% }) %>
+    </select>
+</p>
+
+    <p>
+        <label for="price">Prix au kilo</label>
+        <input type="number" name="price" id="price" placeholder="30.50" step="0.01" required>
+    </p>
+
+    <p>
+    <label for="country_id">Pays d'origine</label>
+    <select name="country_id" id="country_id" required>
+        <% countries.forEach(c => { %>
+            <option value="<%= c.country_id %>"><%= c.name %></option>
+        <% }) %>
+    </select>
+</p>
+
+    <p>
+        <select name="available" id="available" required>
+            <option value="">-- Disponibilité --</option>
+            <option value="Oui">Oui</option>
+            <option value="Non">Non</option>
+        </select>
+    </p>
+
+    <p>
+        <button type="submit">Valider</button>
+    </p>
+
+</form>
+</section>
+
+    <%- include ('partials/footer') %>

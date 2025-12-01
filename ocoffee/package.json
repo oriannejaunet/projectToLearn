@@ -1,0 +1,37 @@
+{
+  "name": "sb04-ocoffee-oriannejaunet",
+  "version": "1.0.0",
+  "description": "[Le projet](./docs/demande-client/)",
+  "homepage": "https://github.com/O-clock-Francfort/SB04-ocoffee-oriannejaunet#readme",
+  "bugs": {
+    "url": "https://github.com/O-clock-Francfort/SB04-ocoffee-oriannejaunet/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/O-clock-Francfort/SB04-ocoffee-oriannejaunet.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "module",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "dev": "node --watch index.js",
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "dotenv": "^17.2.3",
+    "ejs": "^3.1.10",
+    "express": "^5.1.0",
+    "leaflet": "^1.9.4",
+    "pg": "^8.16.3"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.39.1",
+    "@stylistic/eslint-plugin": "^5.6.1",
+    "eslint": "^9.39.1",
+    "globals": "^16.5.0"
+  }
+}
